@@ -1,0 +1,6 @@
+#define LINE_LENGTH 81
+#define LABLE_LENGTH 31
+#define STRATING_ADRESS 100
+#define CMD_NUM 16
+#define REG_NUM 8
+
