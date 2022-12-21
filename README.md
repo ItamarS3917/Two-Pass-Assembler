@@ -14,6 +14,13 @@
  **Run** `./assembler yourFileName.as`
 The assembler will output .ent, .ext and .ob files
 
+## Example
+- `file.as` - The source file
+- `file.am` - The source file after macro layout before the first pass
+- `file.ob` - Output file translated into base 32 
+- `file.ent` - The entry labels from the source file
+- `file.ext` - The extern labels from the source file
+
 
 
 | `file.as`               | `file.am`                | `file.ob`                | `file.ent`  | `file.ext`|
@@ -37,23 +44,23 @@ The assembler will output .ent, .ext and .ob files
 | bne L3                | LENGTH: .data 6,-9,15  | $k gm                   |           ||
 | END: hlt              | K: .data 22            | $l !<                   |           ||
 | STR: .string "abcdef" | S1: .struct 8, "ab"    | $m !c                   |           ||
-| LENGTH: .data 6,-9,15 |                        | $n k%                   |           ||
+| LENGTH: .data 6,-9,15 |                        | \$n k%                   |           ||
 | K: .data 22           |                        | $o !@                   |           ||
 | S1: .struct 8, "ab"   |                        | $p u!                   |           ||
-|                       |                        | $q $@                   |           ||
-|                       |                        | $r $#                   |           ||
-|                       |                        | $s $$                   |           ||
-|                       |                        | $t $%                   |           ||
-|                       |                        | $u $^                   |           ||
-|                       |                        | $v $&                   |           ||
-|                       |                        | %! !!                   |           ||
-|                       |                        | %@ !&                   |           ||
-|                       |                        | %# vn                   |           ||
-|                       |                        | %$ !f                   |           ||
-|                       |                        | %% !m                   |           ||
-|                       |                        | %^ !<                   |           ||
-|                       |                        | %& $@                   |           ||
-|                       |                        | %* !!                   |           ||
+|                       |                        | \$ q $@                   |           ||
+|                       |                        | \$ r $#                   |           ||
+|                       |                        | \$ s $$                   |           ||
+|                       |                        | \$ t $%                   |           ||
+|                       |                        | \$ u $^                   |           ||
+|                       |                        | \$ v $&                   |           ||
+|                       |                        | \% ! !!                   |           ||
+|                       |                        | \% @ !&                   |           ||
+|                       |                        | \% # vn                   |           ||
+|                       |                        | \% $ !f                   |           ||
+|                       |                        | \% % !m                   |           ||
+|                       |                        | \% ^ !<                   |           ||
+|                       |                        | \% & $@                   |           ||
+|                       |                        | \% * !!                   |           ||
 
 
 
