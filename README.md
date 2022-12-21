@@ -17,13 +17,13 @@ The assembler will output .ent, .ext and .ob files
 ## Example
 
 
-| file.as               | file.am                | file.ob                 | file.ent  | file.ext|
-| :-------- :           | :------- :             | :----------------------:| :-------: |  :-----:|
-| macro m1              | .entry LOOP            | $% @%                   | LOOP $b   |  W $*    |
-| inc K                 | .entry LENGTH          | $^ gm                   | LENGTH %@ | W $c  |
-| mov S1.2 ,r3          | .extern L3             | $& !%                   |           | L3 $o|
-| endmacro              | .extern W              | $* !@                   |           | |
-| .entry LOOP           | inc K                  | $< ^k                   |           | |
+| `file.as`               | `file.am`                | `file.ob`                | `file.ent`  | `file.ext`|
+| :--------           | :-------             | :----------------------| :------- |  :-----|
+ macro m1              | .entry LOOP            | $% @%                   | LOOP $b   |  W $*    |
+| inc K                 | .entry LENGTH          | $^ gm                   | LENGTH %@ |  W $c  |
+| mov S1.2 ,r3          | .extern L3             | $& !%                   |           |  L3 $o|
+| endmacro              | .extern W              | $* !@                   |           |         |
+| .entry LOOP           | inc K                  | $< ^k                   |           |         |
 | .entry LENGTH         | mov S1.2 ,r3           | $> %!                   |           ||
 | .extern L3            | MAIN: mov S1.1, W      | $a fa                   |           ||
 | .extern W             | add r2,STR             | $b i%                   |           ||
