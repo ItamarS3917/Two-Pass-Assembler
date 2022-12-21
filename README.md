@@ -14,7 +14,6 @@
  **Run** `./assembler yourFileName.as`
 The assembler will output .ent, .ext and .ob files
 
-## Example
 
 
 | `file.as`               | `file.am`                | `file.ob`                | `file.ent`  | `file.ext`|
